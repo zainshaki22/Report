@@ -66,6 +66,7 @@ body {
 
 .calc-inputs {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     font-size: 12px;
     color: #2c3e50;
@@ -161,6 +162,8 @@ h1 {
     margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .eval-key span strong {
@@ -194,7 +197,7 @@ table {
 
 th, td {
     border: 1px solid var(--border-color);
-    padding: 4px 6px;
+    padding: 6px 8px;
     text-align: left;
     vertical-align: middle;
 }
@@ -210,7 +213,7 @@ th {
 }
 
 .col-rating {
-    width: 17% !important;
+    width: 25% !important;
     text-align: center;
 }
 
@@ -219,8 +222,8 @@ select.rating-select {
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 3px;
-    padding: 2px;
-    font-size: 11px;
+    padding: 4px;
+    font-size: 12px;
     background: #fff;
     outline: none;
 }
@@ -240,13 +243,13 @@ select.rating-select {
 
 .comments-box textarea {
     width: 100%;
-    height: 50px;
+    height: 80px;
     border: 1px solid var(--border-color);
     border-radius: 4px;
-    padding: 6px;
+    padding: 8px;
     font-family: inherit;
     font-size: 12px;
-    resize: none;
+    resize: vertical;
     outline: none;
     box-sizing: border-box;
 }
@@ -271,6 +274,35 @@ select.rating-select {
 
 .btn:hover {
     background-color: #117a65;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .page-container {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    .meta-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .school-header {
+        font-size: 14px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 13px;
+    }
+    .calc-inputs {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
 
 /* PRINT STYLES */
